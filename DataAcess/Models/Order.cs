@@ -21,6 +21,6 @@ namespace DataAccess.Models
         public int? AmountProduct { get; set; }
         public DateTime? CreatedDate { get; set; }
 
-        public List<Product> Products { get; set; } = [];
+       
     }
 }
