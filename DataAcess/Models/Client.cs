@@ -18,6 +18,6 @@ namespace DataAccess.Models
         public string? CompanyAdress { get; set; }
         public string? ContactName { get; set; }
 
-        public List<Order> Orders { get; set; } = [];
+     
     }
 }
