@@ -20,6 +20,7 @@ namespace TestTerekhov
             var excelController = new ExcelController(excelDb);
             var excelHelper = new ExcelHelper(excelDb, filePath, excelController);
             var result = excelHelper.PasreExcelFileToDB(filePath);
+             var action = 0;
             while (true)
             {
                 if (result)
@@ -32,7 +33,11 @@ namespace TestTerekhov
                         Console.WriteLine("2. Изменить контактное лицо компании");
                         Console.WriteLine("3. Узнать Зологото клиента за год");
                         Console.WriteLine("4. Узнать Зологото клиента за месяц");
-                        var action = Convert.ToInt32(Console.ReadLine());
+                         try
+                            {
+                                 action = Convert.ToInt32(Console.ReadLine());
+                            }
+                         catch(Exception ex) { Console.WriteLine(ex.Message); }
 
                         switch (action)
                         {
